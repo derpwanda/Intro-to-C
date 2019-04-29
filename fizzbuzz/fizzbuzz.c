@@ -11,6 +11,7 @@
 int fizzbuzz(int n)
 {
     int i;
+    int counter;
     for (i=1; i<=n; i++)
     {
         if (i % 15 == 0)
@@ -23,11 +24,12 @@ int fizzbuzz(int n)
             printf("Buzz\n");
 
         else
-            printf("%i\n", i); //%i is for integers
+            counter++;
+            // printf("%i\n", i); //%i is for integers
     }
     
     //my function main returns an int so I should have a return at the end of it
-    return 0; 
+    return counter; 
     
 }
 

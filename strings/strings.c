@@ -10,6 +10,15 @@
 int string_length(char *s)
 {
 
+    int counter = 0;
+    while (s[counter] != '\0')       
+    {
+        counter++;
+    }
+
+    //printf("%d\n", counter);
+
+    return counter;
 }
 
 /*

@@ -15,10 +15,18 @@
 */
 void string_copy(char *x, char *y)
 {
-
+    int j = 0;
+    while (*y != '\0')
+    {
+        printf("%c\n", *x);
+        j++;
+        y++;
+    }
+    x[j] = '\0';
 }
 
-/*
+
+/* 
     Searches the input string `str` for the first instance of the 
     character `c` (an unsigned char). This function returns a pointer
     that points to the first instance of the character `c` in the

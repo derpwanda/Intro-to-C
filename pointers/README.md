@@ -40,10 +40,10 @@ As showcased above, declaring a pointer is as simple as putting an asterisk afte
 int x = 1, y = 2, z[10];
 int *ip;        /* ip is a pointer to an int */
 
-ip = &x;        /* ip now points to x */
+ip = &x;        /* ip now points to x (which is 1) */
 y = *ip;        /* y is now 1 */
 *ip = 0;        /* x is now 0 */
-ip = &z[0];     /* ip now points to z[0] */
+ip = &z[0];     /* ip now points to z[0] (the '1' of one-zero/ten*/
 ```
 
 There's nothing new going on in the first two lines of this block. Starting at the third line with `ip = &x;`, we see the `&` operator. This means we're grabbing the _address_ of the variable `x`, or in other words, we're asking for the address where the value of `x` (`1` in this case) is being stored. We do this because `ip` is a pointer, which stores an address, not a value. If we did `ip = x;`, that would be saying "store the value of the variable x in the variable `ip`", which would not compile since we've declared `ip` to be an integer pointer, not an integer value. 

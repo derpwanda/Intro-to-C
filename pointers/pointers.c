@@ -39,11 +39,13 @@ void string_copy(char *x, char *y)
 char *find_char(char *str, int c)
 {
     int i;
-    for (i=0; i <= strlen(str); i++)
+    int length = strlen(str);
+
+    for (i=0; i <= length-1; i++)
     {
         if (str[i] == c)
         {
-            return c;
+            return &str[i];
         }
     }
     return 0;
@@ -70,7 +72,7 @@ int main(void)
     // string_copy(buffer, "Hello!");
     // printf("%s", buffer); // Prints "Hello!"
 
-    char *found_char = find_char(hello, 'e');
+    char *found_char = find_char("hello", 'e');
     // char *found_string = find_string(world, "or");
 
     printf("Found char: %s\n", found_char);

@@ -13,8 +13,8 @@
 char *string_dup(char *src)
 {
     // allocate space
-    char *src_string_length = malloc(strlen(src) * sizeof(char));
-    int length = strlen(src);
+    char *src_string_length = malloc(string_length(src));
+    int length = string_length(src);
     //fill space
     for (int i=0; i < length; i++)
     {
@@ -32,7 +32,20 @@ char *string_dup(char *src)
 */
 void mem_copy(void *dest, const void *src, int n)
 {
+    // cast the input pointers
+    // had to use const like in params
+    //dont have to use void though
+    const char *source = src;
+    char *destination = dest;
 
+    // fill space/make copy
+    // n is the amount of data that should be copied
+    for (int i = 0; i < n; i++)
+    {
+        destination[i] = source[i];
+    }
+    // cant return value when function is a void
+    //return destination;
 }
 
 /*
